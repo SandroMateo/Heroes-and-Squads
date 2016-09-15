@@ -1,0 +1,15 @@
+<h1>Choose a Squad To Join!</h1>
+#if(!$squadList)
+  <h4>there are no squads</h4>
+#else
+  <form action="/final" method="post">
+    #foreach($squad.getName() in $squad.getName()List)
+      <label for="$squad.getName()">
+      <input type="radio" name="$squad.getName()" value="$squad.getName()">
+        $squad.getName();
+      </label>
+    #end
+  </form>
+
+#end
+<a href="/squad-form">or create your own squad</a>

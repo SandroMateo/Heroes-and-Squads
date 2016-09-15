@@ -1,0 +1,18 @@
+<h3>Squads</h3>
+<ul>
+  #foreach($squad in $squadList)
+    <li><strong>$squad.getName()</strong></li>
+    <p>Passion: $squad.getPassion()</p>
+    <h5>Heroes</h5>
+    <ul>
+      #foreach($hero in $squad.getHeroes())
+        <li><strong>$hero.getName()</strong></li>
+        <p>Age: $hero.getAge()</p>
+        <p>Power: $hero.getPower()</p>
+        <p>Weakness: $hero.getWeakness()</p>
+      #end
+    </ul>
+  #end
+</ul>
+
+<p><a href="/">Play Again?</a></p>
