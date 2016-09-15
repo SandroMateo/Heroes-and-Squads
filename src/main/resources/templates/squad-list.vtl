@@ -4,10 +4,12 @@
 #else
   <form action="/finalist" method="post">
     #foreach($squad.getName() in $squadList)
-      <label for=$squad.getName()>
-      <input type="radio" name="squadSelect" value=$squad.getId()>
-        $squad.getName()
-      </label>
+      <p class="squads">
+        <label for=$squad.getName()>
+        <input type="radio" name="squadSelect" value=$squad.getId()>
+          $squad.getName()
+        </label>
+      </p>
     #end
     <button type="submit" class="btn btn-danger">Join!</button>
   </form>
