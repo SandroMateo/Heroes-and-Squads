@@ -2,13 +2,14 @@
 #if(!$squadList)
   <h4>there are no squads</h4>
 #else
-  <form action="/final" method="post">
-    #foreach($squad.getName() in $squad.getName()List)
-      <label for="$squad.getName()">
-      <input type="radio" name="$squad.getName()" value="$squad.getName()">
-        $squad.getName();
+  <form action="/finalist" method="post">
+    #foreach($squad.getName() in $squadList)
+      <label for=$squad.getName()>
+      <input type="radio" name="squadSelect" value=$squad.getId()>
+        $squad.getName()
       </label>
     #end
+    <button type="submit" class="btn btn-danger">Join!</button>
   </form>
 
 #end
